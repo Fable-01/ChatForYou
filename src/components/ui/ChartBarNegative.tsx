@@ -11,12 +11,12 @@ import {
 
 
 
-export function ChartBarNegative({data}) {
+export function ChartBarNegative({data}:any) {
 
 
  
 
-  const chartData = data.map((s) => ({
+  const chartData = data.map((s:any) => ({
     name: s.symbol,
     percent_change: Number(s.percent_change_24h),
   }));
@@ -51,7 +51,7 @@ export function ChartBarNegative({data}) {
               />
               <Bar dataKey="percent_change">
                 <LabelList position="top" dataKey="name" fillOpacity={1} />
-                {chartData.map((item) => (
+                {chartData.map((item:any) => (
                   <Cell
                     key={item.name}
                     fill={
