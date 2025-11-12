@@ -10,7 +10,19 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export function SectionCards({data,data2,data3,data4,data5}) {
+
+interface SectionCardsProps {
+  data: string;   // coin name
+  data2: number;  // rank
+  data3: string;  // currency
+  data4: string;  // market cap
+  data5: number;  // volume
+}
+
+
+
+
+export function SectionCards({data,data2,data3,data4,data5}:SectionCardsProps) {
 
 
   

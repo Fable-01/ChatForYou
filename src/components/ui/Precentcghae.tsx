@@ -6,7 +6,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export function Precentcghae({ data, data2, data3 }) {
+
+interface typeProps {
+
+data:string;
+data2:string;
+data3:string;
+
+
+}
+
+
+export function Precentcghae({ data, data2, data3 }:typeProps) {
   return (
     <div className="">
       <Card className="  bg-neutral-900 w-[400px] ">
@@ -22,7 +33,7 @@ export function Precentcghae({ data, data2, data3 }) {
              <div className="   capitalize line-clamp-1 flex gap-2 font-medium text-white ">
             percent_change_1h
           </div>
-          {data >= 0 ? (
+          {Number(data)>= 0 ? (
             <div className=" text-green-500 capitalize">{data} %</div>
           ) : (
             <div className=" text-red-500 capitalize">{data} %</div>
@@ -31,7 +42,7 @@ export function Precentcghae({ data, data2, data3 }) {
           <div className="  capitalize line-clamp-1 flex gap-2 font-medium text-white ">
             percent_change_24h
           </div>
-          {data2 >= 0 ? (
+          {Number(data2) >= 0 ? (
             <div className="text-green-500 capitalize">{data2} %</div>
           ) : (
             <div className="text-red-500 capitalize">{data2} %</div>
@@ -41,7 +52,7 @@ export function Precentcghae({ data, data2, data3 }) {
             percent_change_7d
           </div>
 
-          {data3 >= 0 ? (
+          {Number(data3) >= 0 ? (
             <div className="text-green-500 capitalize">{data3} %</div>
           ) : (
             <div className="text-red-500 capitalize">{data3} %</div>
